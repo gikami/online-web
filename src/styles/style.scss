@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+$main-font: "Montserrat";
+$background-color: #F9F9F9;
+$gradient: linear-gradient(to right, #FF512F, #F09819);
+$gradient-full: linear-gradient(to right, #FF512F, #F09819, #F09819, #FF512F);
+$radius: 8px;
+$gray: #8D8D8D;
+
+a, a:hover, a:focus, a:active {
+  color: inherit;
+  outline: none;
+  text-decoration: none;
+  cursor: pointer;
+}
+p, label, span, a, form, select, div, blockquote, cite, figure, figcaption, table, ul, ol, dl {
+  line-height: normal;
+  margin-bottom: 0px;
+}
+
+h1 {
+    font-size: 1em;
+    font-weight: 600;
+    text-align: center;
+}
+.fs {
+    &-07 {font-size: 0.7em;}
+    &-075 {font-size: 0.75em;}
+    &-08 {font-size: 0.8em;}
+    &-09 {font-size: 0.9em;}
+    &-11 {font-size: 1.1em;}
+    &-12 {font-size: 1.2em;}
+    &-13 {font-size: 1.3em;}
+    &-14 {font-size: 1.4em;}
+    &-15 {font-size: 1.5em;}
+    &-16 {font-size: 1.6em;}
+    &-17 {font-size: 1.7em;}
+    &-18 {font-size: 1.8em;}
+    &-19 {font-size: 1.9em;}
+    &-20 {font-size: 2em;}
+    &-25 {font-size: 2.5em;}
+}
+.fw {
+    &-3 {font-weight: 300;}
+    &-4 {font-weight: 400;}
+    &-5 {font-weight: 500;}
+    &-6 {font-weight: 600;}
+    &-7 {font-weight: 700;}
+    &-8 {font-weight: 800;}
+    &-9 {font-weight: 900;}
+}
+.gray {color: $gray;}
+
+body {
+    font-family: $main-font, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    background-color: $background-color;
+    color: #000;
+    font-size: 20px;
+    font-weight: 400;
+}
+.container {
+    @media (min-width: 1660px){
+        width: 1596px;
+        max-width: 1596px;
+    }
+}
+
+aside {
+    background: $background-color;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 20px 0px 0px 20px;
+    margin-right: -25px;
+    padding: 2em .5em;
+    .my-info {
+        text-align: center;
+        .photo {
+            background: $gradient;
+            width: 116px;
+            height: 116px;
+            padding: 3px;
+            border-radius: 25px;
+            margin: 0 auto 1em;
+            img {
+                width: 110px;
+                height: 110px;
+                object-fit: cover;
+                padding: 6px;
+                background: $background-color;
+                border-radius: 22px;
+            }
+        }
+    }
+    hr {
+        width: 2px;
+        background-color: #EAEAEA;
+        height: auto !important;
+        opacity: 1;
+        margin: 0px;
+    }
+    nav {
+        ul {
+            list-style: none;
+            svg {
+                width: 1.7em;
+                height: 1.7em;
+                fill: none;
+                .fill {fill: #000;}
+                .stroke {
+                    stroke: #000;
+                }
+            }
+        }
+        
+    }
+}
+
+main {
+    background-color: #fff;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 25px;
+    padding: 2.5em 5em;
+}
