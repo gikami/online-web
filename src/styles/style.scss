@@ -5,6 +5,14 @@ $gradient: linear-gradient(to right, #FF512F, #F09819);
 $gradient-full: linear-gradient(to right, #FF512F, #F09819, #F09819, #FF512F);
 $radius: 8px;
 $gray: #8D8D8D;
+$transition: .3s ease-in;
+
+/* mixins */
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 a, a:hover, a:focus, a:active {
   color: inherit;
@@ -18,9 +26,16 @@ p, label, span, a, form, select, div, blockquote, cite, figure, figcaption, tabl
 }
 
 h1 {
-    font-size: 1em;
+    font-size: 1.5em;
     font-weight: 600;
-    text-align: center;
+    text-align: left;
+    margin-bottom: .5em;
+}
+h2 {
+    font-size: 1.1em;
+    font-weight: 500;
+    text-align: left;
+    margin-bottom: .5em;
 }
 .fs {
     &-07 {font-size: 0.7em;}
@@ -49,13 +64,72 @@ h1 {
     &-9 {font-weight: 900;}
 }
 .gray {color: $gray;}
+.blue {color: #0280B7;}
+
+/* FORMS CUSTOMIZATION */
+input,
+textarea {
+  background: #ffffff;
+  border: 1px solid $gray;
+  border-radius: 4px;
+  padding: .5em .85em;
+  width: 100%;
+  line-height: normal;
+  box-shadow: unset;
+  outline: none;
+  display: block;
+  &:-moz-placeholde {color: $gray;}
+  &::-moz-placeholder {color: $gray;}
+  &::-webkit-input-placeholder {color: $gray;}
+  &:-ms-input-placeholder {color: $gray;}
+  &::-ms-input-placeholder {color: $gray;}
+  &::placeholder {color: $gray;}
+}
+input {
+    &[type="search"]{
+        background-color: $background-color;
+        border: 1px solid $background-color;
+        border-radius: 10px;
+    }
+}
+button {
+    background: none;
+    border: none;
+    padding: unset;
+    display: block;
+    font-family: inherit;
+    outline: none;
+    color: inherit;
+}
+.btn {
+    @include flex-center;
+    padding: 0.6em 1em;
+    border-radius: 10px;
+    text-align: center;
+    width: fit-content;
+    font-size: 1em;
+    line-height: normal;
+    font-weight: 500;
+    &-1 {
+        background-image: $gradient-full;
+        background-size: 200% 100%;
+        background-position: left center;
+        background-repeat: no-repeat;
+        color: #fff;
+    }
+    &-3 {
+        background-color: $background-color;
+        
+    }
+}
+
 
 body {
     font-family: $main-font, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
     background-color: $background-color;
     color: #000;
     font-size: 20px;
-    font-weight: 400;
+    font-weight: 500;
 }
 .container {
     @media (min-width: 1660px){
@@ -65,30 +139,94 @@ body {
 }
 
 aside {
+    position: sticky;
+    top: 0px;
+    left: 0px;
+    width: calc(100% + 25px);
     background: $background-color;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
     border-radius: 20px 0px 0px 20px;
     margin-right: -25px;
-    padding: 2em .5em;
+    padding: 2em calc(.5em + 25px) 2em .5em;
+    z-index: 1;
     .my-info {
         text-align: center;
         .photo {
-            background: $gradient;
             width: 116px;
             height: 116px;
-            padding: 3px;
-            border-radius: 25px;
-            margin: 0 auto 1em;
-            img {
-                width: 110px;
-                height: 110px;
-                object-fit: cover;
-                padding: 6px;
-                background: $background-color;
-                border-radius: 22px;
-            }
         }
     }
+    nav {
+        ul {
+            list-style: none;
+            padding: 0 1.5em;
+            li:not(:first-child){margin-top: 1.5em;}
+            li:last-child {
+                border-top: 2px solid #EAEAEA;
+                padding-top: 1.5em;
+            }
+            a, button {
+                font-size: 1em;
+                font-weight: 500;
+                width: 100%;
+                display: flex;
+                align-items: center;
+                div {
+                    flex: 1;
+                    margin-left: 1em;
+                }
+                img {
+                    width: 1.7em;
+                    height: 1.7em;
+                    object-fit: cover;
+                    object-position: center top;
+                }
+                svg {
+                    width: 1.7em;
+                    height: 1.7em;
+                    fill: none;
+                    .stroke {stroke: #000;}
+                }
+                &:hover div {
+                    background-image: $gradient;
+                    -webkit-background-clip: text;
+                    background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    text-fill-color: transparent;
+                }
+                &:hover, &.active {
+                    svg {
+                        .fill-hover {fill: url(#gradient);}
+                        .stroke {stroke: url(#gradient);} 
+                    }
+                    img {
+                        object-position: center bottom;
+                    }
+                }
+            }    
+        }
+    }
+}
+
+.photo {
+    --unit: 3px;
+    --radius: 25px;
+    background: $gradient;
+    width: 100%;
+    height: 100%;
+    padding: var(--unit);
+    border-radius: var(--radius);
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        padding: calc(var(--unit)*2);
+        background: $background-color;
+        border-radius: calc(var(--radius) - var(--unit));
+    }
+}
+.brief-stat {
+    text-align: center;
     hr {
         width: 2px;
         background-color: #EAEAEA;
@@ -96,27 +234,88 @@ aside {
         opacity: 1;
         margin: 0px;
     }
-    nav {
-        ul {
-            list-style: none;
-            svg {
-                width: 1.7em;
-                height: 1.7em;
-                fill: none;
-                .fill {fill: #000;}
-                .stroke {
-                    stroke: #000;
-                }
+}
+
+main {
+    position: relative;
+    z-index: 2;
+    background-color: #fff;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 25px;
+    padding: 2.5em 5em;
+    @media (max-width: 1659px){
+        padding: 2em 2.5em;
+    }
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2em;
+}
+
+.user-info {
+    .photo {
+        --unit: 6px;
+        --radius: 40px;
+        height: 390px;
+    }
+}
+
+.topical {
+    position: relative;
+    padding: 0 3em;
+    .swiper {
+        position: unset;
+        .swiper-slide {
+            width: 100px;
+            text-align: center;
+            .photo {
+                height: 100px;
+                width: 100px;
             }
         }
         
     }
 }
 
-main {
-    background-color: #fff;
-    background: #FFFFFF;
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
-    border-radius: 25px;
-    padding: 2.5em 5em;
+.publications {
+    .btn-group {
+        @include flex-center();
+        border-top: 2px solid #EAEAEA;
+        margin-bottom: 1em;
+        button {
+            @include flex-center();
+            padding-top: .5em;
+            svg {
+                width: 1.4em;
+                height: 1.4em;
+                path {fill: $gray;}
+            }
+            &.active {
+                position: relative;
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: -3px;
+                    left: 0px;
+                    width: 100%;
+                    height: 4px;
+                    background-image: linear-gradient(to top, #FF512F, #F09819);
+                }
+                svg {
+                    path {fill: url(#gradient)}
+                }
+            }
+        }
+    }
+    
+    .post {
+        width: 100%;
+        height: 310px;
+        object-fit: cover;
+        border-radius: 20px;
+    }
 }

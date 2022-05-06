@@ -3,6 +3,7 @@ import { Routes, Route, useLocation } from 'react-router-dom';
 import { useLayoutEffect } from 'react';
 
 import MyProfile from '../pages/MyProfile';
+import UserProfile from '../pages/UserProfile';
 
 export default function AppRouter() {
     const Wrapper = ({children}) => {
@@ -15,9 +16,10 @@ export default function AppRouter() {
    
     return (
         <Wrapper>
-        <Routes>
-            <Route exact path="/" element={<MyProfile />} />
-        </Routes>
+            <Routes>
+                <Route exact path="/" element={<UserProfile />} />
+                <Route exact path="/my-profile" element={<MyProfile />} />
+            </Routes>
         </Wrapper>
     )
 }

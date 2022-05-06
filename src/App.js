@@ -7,10 +7,10 @@ import AppRouter from './components/AppRouter';
 
 function App() {
   return (
-    <div className="container">
+    <div className="container py-4">
       <HashRouter>
         <div className="row g-0">
-          <div className="col-3">
+          <div className="col-3 position-relative">
             <MainNav />
           </div>
           <div className="col-9">
