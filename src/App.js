@@ -4,21 +4,36 @@ import './styles/style.min.css';
 import MainNav from './components/MainNav';
 import AppRouter from './components/AppRouter';
 
+import { IoAddCircleOutline, IoMenuOutline } from "react-icons/io5";
+import { IconContext  } from "react-icons";
+import MobileFooter from "./components/MobileFooter";
 
 function App() {
   return (
-    <div className="container py-4">
-      <HashRouter>
+    <HashRouter>
+      <div className="container-xl py-xl-4">
+        <header className="d-flex d-md-none">
+          <div className="fs-11 fw-6">@drugoiacc</div>
+          <div className="d-flex align-items-center">
+            <button type="button">
+              <img src="../img/icons/add.svg" alt="Опубликовать"/>
+            </button>
+            <button type="button" className="ms-4">
+              <img src="../img/icons/burger.svg" alt="Меню"/>
+            </button>
+          </div>
+        </header>
         <div className="row g-0">
-          <div className="col-3 position-relative">
+          <div className="d-none d-md-block col-2 col-xl-3 position-relative">
             <MainNav />
           </div>
-          <div className="col-9">
+          <div className="col-md-10 col-xl-9">
             <AppRouter/>
           </div>
         </div>
-      </HashRouter>
-    </div>
+      </div>
+      <MobileFooter />
+    </HashRouter>
   );
 }
 
