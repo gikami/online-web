@@ -5,13 +5,13 @@ export default function MainNav(props) {
 
     return (
         <aside>
-            <img src="../img/logo.svg" className="d-block mx-auto mb-3"/>
+            <img src="/online-web/img/logo.svg" className="d-block mx-auto mb-3"/>
             <div className='fw-6 text-center'>Online</div>
             {
                 (location.pathname !== '/my-profile') &&
                 <div className="my-info mt-4 mt-xxl-5">
                     <div className="photo mx-auto mb-3">
-                        <img src="../img/users/user0.png" className="d-block mx-auto mb-3"/>
+                        <img src="/online-web/img/users/user0.png" className="d-block mx-auto mb-3"/>
                     </div>
                     <div className="d-none d-xl-block fs-12 fw-5">Вероника Евгеньева</div>
                     <div className="d-none d-xl-block gray mt-2">@evgenievaaa</div>
@@ -37,51 +37,51 @@ export default function MainNav(props) {
                 <ul>
                     <li>
                         <NavLink to="/">
-                            <img src="../img/icons/home-sprite.png" alt="home"/>
+                            <img src="/online-web/img/icons/home-sprite.png" alt="home"/>
                             <div>Главная</div>
                         </NavLink>
                     </li>
                     <li>
                         <NavLink to="reels">
-                            <img src="../img/icons/video-sprite.png" alt="Reels"/>
+                            <img src="/online-web/img/icons/video-sprite.png" alt="Reels"/>
                             <div>Видео Reels</div>
                         </NavLink>
                     </li>
                     <li>
                         <NavLink to="my-profile">
-                            <img src="../img/icons/user-sprite.png" alt="user"/>
+                            <img src="/online-web/img/icons/user-sprite.png" alt="user"/>
                             <div>Профиль</div>
                         </NavLink>
                     </li>
                     <li>
                         <NavLink to="search">
-                            <img src="../img/icons/search-sprite.png" alt="search"/>
+                            <img src="/online-web/img/icons/search-sprite.png" alt="search"/>
                             <div>Поиск</div>
                         </NavLink>
                     </li>
                     <li>
                         <NavLink to="notifications">
-                            <img src="../img/icons/notifications-sprite.png" alt="notifications"/>
+                            <img src="/online-web/img/icons/notifications-sprite.png" alt="notifications"/>
                             <div>Уведомления</div>
                             <span>2</span>
                         </NavLink>
                     </li>
                     <li>
                         <NavLink to="messages">
-                            <img src="../img/icons/messages-sprite.png" alt="messages"/>
+                            <img src="/online-web/img/icons/messages-sprite.png" alt="messages"/>
                             <div>Сообщения</div>
                             <span>12</span>
                         </NavLink>
                     </li>
                     <li>
                         <NavLink to="statistics">
-                            <img src="../img/icons/stat-sprite.png" alt="statistics"/>
+                            <img src="/online-web/img/icons/stat-sprite.png" alt="statistics"/>
                             <div>Статистика</div>
                         </NavLink>
                     </li>
                     <li>
                         <button type='button'>
-                            <img src="../img/icons/exit-sprite.png" alt="exit"/>
+                            <img src="/online-web/img/icons/exit-sprite.png" alt="exit"/>
                             <div className='text-start'>Выход</div>
                         </button>
                     </li>

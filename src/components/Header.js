@@ -16,11 +16,11 @@ export default function Header(props) {
             </div>
             <div className="d-flex align-items-center">
                 <Link to="notifications" className="me-3">
-                    <img src="../img/icons/notifications-sprite.png" alt="notifications"/>
+                    <img src="/online-web/img/icons/notifications-sprite.png" alt="notifications"/>
                     <div className='indicator active'></div>
                 </Link>
                 <Link to="messages" className="me-3">
-                    <img src="../img/icons/messages-sprite.png" alt="messages"/>
+                    <img src="/online-web/img/icons/messages-sprite.png" alt="messages"/>
                     <div className='indicator active'></div>
                 </Link>
                 <button type="button" className="btn btn-1">
