@@ -1,3 +1,4 @@
+import React, {useState} from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, FreeMode } from 'swiper';
 import 'swiper/css';
@@ -7,6 +8,8 @@ import Header from "../components/Header";
 import TextAbout from '../components/utilities/TextAbout';
 
 export default function UserProfile() {
+    const [content, setContent] = useState('photo');
+
     return (
         <main>
             <Header className="d-none d-md-flex" />
@@ -153,7 +156,7 @@ export default function UserProfile() {
 
             <section className="publications mt-3 mt-sm-4 mt-md-5">
                 <div className="btn-group">
-                    <button type="button" className="active">
+                    <button type="button" onClick={() => setContent('photo')} className={(content === 'photo') && "active"}>
                         <svg viewBox="0 0 27 28" xmlns="http://www.w3.org/2000/svg">
                             <defs>
                                 <linearGradient id="gradient">
@@ -173,7 +176,7 @@ export default function UserProfile() {
                         </svg>
                         <span className="d-none d-sm-inline fw-6 ms-3">Публикации</span>
                     </button>
-                    <button type="button" className="ms-sm-5">
+                    <button type="button" onClick={() => setContent('video')} className={(content === 'video') ? "active ms-sm-5" : "ms-sm-5"}>
                         <svg viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
                             <path fillRule="evenodd" clipRule="evenodd" d="M0 35.0029V14.8253C0 14.273 0.447714 13.8298 0.999999 13.8298H49C49.5523 13.8298 50 14.2775 50 14.8298V35C50 43.2843 43.2843 50 35 50H15C6.71573 50 0 43.2871 0 35.0029ZM23.2734 38.0822C22.3094 38.8546 20.88 38.1683 20.88 36.933V23.067C20.88 21.8317 22.3094 21.1454 23.2734 21.9178L31.9258 28.8508C32.6615 29.4403 32.6615 30.5597 31.9258 31.1492L23.2734 38.0822Z"/>
                             <path d="M19.6904 11H33.2401L29.6744 0H16.6001L19.6904 11Z"/>
@@ -183,29 +186,58 @@ export default function UserProfile() {
                         <span className="d-none d-sm-inline fw-6 ms-3">Видео Reels</span>
                     </button>
                 </div>
-                <div className="row row-cols-3 g-1 g-sm-2 g-md-3 g-lg-4 px-3 px-sm-0">
-                    <div>
-                        <img src="../img/img1.png" alt="пост" className="post"/>
-                    </div>
-                    <div>
-                        <img src="../img/img1.png" alt="пост" className="post"/>
-                    </div>
-                    <div>
-                        <img src="../img/img1.png" alt="пост" className="post"/>
-                    </div>
-                    <div>
-                        <img src="../img/img1.png" alt="пост" className="post"/>
-                    </div>
-                    <div>
-                        <img src="../img/img1.png" alt="пост" className="post"/>
-                    </div>
-                    <div>
-                        <img src="../img/img1.png" alt="пост" className="post"/>
-                    </div>
-                    <div>
-                        <img src="../img/img1.png" alt="пост" className="post"/>
-                    </div>
-                </div>
+                <div className='px-3 px-sm-0'>
+                    {
+                        (content === 'photo') ?
+                        <div className="row row-cols-3 g-1 g-sm-2 g-md-3 g-lg-4">
+                            <div>
+                                <img src="../img/img1.png" alt="пост" className="post"/>
+                            </div>
+                            <div>
+                                <img src="../img/img1.png" alt="пост" className="post"/>
+                            </div>
+                            <div>
+                                <img src="../img/img1.png" alt="пост" className="post"/>
+                            </div>
+                            <div>
+                                <img src="../img/img1.png" alt="пост" className="post"/>
+                            </div>
+                            <div>
+                                <img src="../img/img1.png" alt="пост" className="post"/>
+                            </div>
+                            <div>
+                                <img src="../img/img1.png" alt="пост" className="post"/>
+                            </div>
+                            <div>
+                                <img src="../img/img1.png" alt="пост" className="post"/>
+                            </div>
+                        </div>
+                        : <div className="row row-cols-3 g-1 g-sm-2 g-md-3 g-lg-4">
+                            <div>
+                                <img src="../img/img1.png" alt="видео" className="video"/>
+                            </div>
+                            <div>
+                                <img src="../img/img1.png" alt="видео" className="video"/>
+                            </div>
+                            <div>
+                                <img src="../img/img1.png" alt="видео" className="video"/>
+                            </div>
+                            <div>
+                                <img src="../img/img1.png" alt="видео" className="video"/>
+                            </div>
+                            <div>
+                                <img src="../img/img1.png" alt="видео" className="video"/>
+                            </div>
+                            <div>
+                                <img src="../img/img1.png" alt="видео" className="video"/>
+                            </div>+
+                            <div>
+                                <img src="../img/img1.png" alt="видео" className="video"/>
+                            </div>
+                        </div>
+                    }
+                    
+                </div>                     
             </section>
         </main>
     )

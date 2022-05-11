@@ -17,7 +17,7 @@ export default function MobileFooter() {
                     </li>
                     <li>
                         <NavLink to="reels">
-                            <img src="../img/icons/video-stroke-sprite.png" alt="Reels"/>
+                            <img src="../img/icons/video-sprite.png" alt="Reels"/>
                         </NavLink>
                     </li>
                     <li>

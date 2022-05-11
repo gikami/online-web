@@ -4,8 +4,6 @@ import './styles/style.min.css';
 import MainNav from './components/MainNav';
 import AppRouter from './components/AppRouter';
 
-import { IoAddCircleOutline, IoMenuOutline } from "react-icons/io5";
-import { IconContext  } from "react-icons";
 import MobileFooter from "./components/MobileFooter";
 
 function App() {
