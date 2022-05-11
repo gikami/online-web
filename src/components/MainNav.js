@@ -37,52 +37,52 @@ export default function MainNav(props) {
                 <ul>
                     <li>
                         <NavLink to="/">
-                            <img src="/online-web/img/icons/home-sprite.png" alt="home"/>
-                            <div>Главная</div>
+                            <div className='icon icon-home'></div>
+                            <div className='title'>Главная</div>
                         </NavLink>
                     </li>
                     <li>
                         <NavLink to="reels">
-                            <img src="/online-web/img/icons/video-sprite.png" alt="Reels"/>
-                            <div>Видео Reels</div>
+                            <div className='icon icon-video'></div>
+                            <div className='title'>Видео Reels</div>
                         </NavLink>
                     </li>
                     <li>
                         <NavLink to="my-profile">
-                            <img src="/online-web/img/icons/user-sprite.png" alt="user"/>
-                            <div>Профиль</div>
+                            <div className='icon icon-user'></div>
+                            <div className='title'>Профиль</div>
                         </NavLink>
                     </li>
                     <li>
                         <NavLink to="search">
-                            <img src="/online-web/img/icons/search-sprite.png" alt="search"/>
-                            <div>Поиск</div>
+                            <div className='icon icon-search'></div>
+                            <div className='title'>Поиск</div>
                         </NavLink>
                     </li>
                     <li>
                         <NavLink to="notifications">
-                            <img src="/online-web/img/icons/notifications-sprite.png" alt="notifications"/>
-                            <div>Уведомления</div>
+                            <div className='icon icon-notifications'></div>
+                            <div className='title'>Уведомления</div>
                             <span>2</span>
                         </NavLink>
                     </li>
                     <li>
                         <NavLink to="messages">
-                            <img src="/online-web/img/icons/messages-sprite.png" alt="messages"/>
-                            <div>Сообщения</div>
+                            <div className='icon icon-messages'></div>
+                            <div className='title'>Сообщения</div>
                             <span>12</span>
                         </NavLink>
                     </li>
                     <li>
                         <NavLink to="statistics">
-                            <img src="/online-web/img/icons/stat-sprite.png" alt="statistics"/>
-                            <div>Статистика</div>
+                            <div className='icon icon-statistics'></div>
+                            <div className='title'>Статистика</div>
                         </NavLink>
                     </li>
                     <li>
                         <button type='button'>
-                            <img src="/online-web/img/icons/exit-sprite.png" alt="exit"/>
-                            <div className='text-start'>Выход</div>
+                            <div className='icon icon-exit'></div>
+                            <div className='title text-start'>Выход</div>
                         </button>
                     </li>
                 </ul>

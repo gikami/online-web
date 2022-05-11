@@ -292,7 +292,7 @@ aside {
                     width: fit-content;
                     padding: .6em;
                 }
-                div {
+                div.title {
                     flex: 1;
                     margin-left: 1em;
                     @media (max-width: 1199px){display: none;}
@@ -312,18 +312,75 @@ aside {
                         @include flex-center();
                     }
                 }
-                img {
+                // img {
+                //     width: 1.3em;
+                //     height: 1.3em;
+                //     object-fit: cover;
+                //     object-position: center top;
+                // }
+                .icon {
                     width: 1.3em;
                     height: 1.3em;
-                    object-fit: cover;
-                    object-position: center top;
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    background-position: center center;
+                    &-home {
+                        background-image: url(bg-imgs/home-black.png);
+                    }
+                    &-video {
+                        background-image: url(bg-imgs/video-black.png);
+                    }
+                    &-user {
+                        background-image: url(bg-imgs/user-black.png);
+                    }
+                    &-search {
+                        background-image: url(bg-imgs/search-black.png);
+                    }
+                    &-notifications {
+                        background-image: url(bg-imgs/notifications-black.png);
+                    }
+                    &-messages {
+                        background-image: url(bg-imgs/messages-black.png);
+                    }
+                    &-statistics {
+                        background-image: url(bg-imgs/stat-black.png);
+                    }
+                    &-exit {
+                        background-image: url(bg-imgs/exit-black.png);
+                    }
                 }
-                &:hover div {
+                &:hover div.title {
                     @include text-gradient();
                 }
                 &:hover, &.active {
-                    img {
-                        object-position: center bottom;
+                    // img {
+                    //     object-position: center bottom;
+                    // }
+                    .icon {
+                        &-home {
+                            background-image: url(bg-imgs/home-gradient.png);
+                        }
+                        &-video {
+                            background-image: url(bg-imgs/video-gradient.png);
+                        }
+                        &-user {
+                            background-image: url(bg-imgs/user-gradient.png);
+                        }
+                        &-search {
+                            background-image: url(bg-imgs/search-gradient.png);
+                        }
+                        &-notifications {
+                            background-image: url(bg-imgs/notifications-gradient.png);
+                        }
+                        &-messages {
+                            background-image: url(bg-imgs/messages-gradient.png);
+                        }
+                        &-statistics {
+                            background-image: url(bg-imgs/stat-gradient.png);
+                        }
+                        &-exit {
+                            background-image: url(bg-imgs/exit-gradient.png);
+                        }
                     }
                 }
                 &.active {

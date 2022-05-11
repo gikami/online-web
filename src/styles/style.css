@@ -474,7 +474,7 @@ aside nav ul a, aside nav ul button {
   }
 }
 
-aside nav ul a div, aside nav ul button div {
+aside nav ul a div.title, aside nav ul button div.title {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
@@ -482,7 +482,7 @@ aside nav ul a div, aside nav ul button div {
 }
 
 @media (max-width: 1199px) {
-  aside nav ul a div, aside nav ul button div {
+  aside nav ul a div.title, aside nav ul button div.title {
     display: none;
   }
 }
@@ -515,16 +515,47 @@ aside nav ul a span, aside nav ul button span {
   }
 }
 
-aside nav ul a img, aside nav ul button img {
+aside nav ul a .icon, aside nav ul button .icon {
   width: 1.3em;
   height: 1.3em;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center top;
-     object-position: center top;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
 }
 
-aside nav ul a:hover div, aside nav ul button:hover div {
+aside nav ul a .icon-home, aside nav ul button .icon-home {
+  background-image: url(bg-imgs/home-black.png);
+}
+
+aside nav ul a .icon-video, aside nav ul button .icon-video {
+  background-image: url(bg-imgs/video-black.png);
+}
+
+aside nav ul a .icon-user, aside nav ul button .icon-user {
+  background-image: url(bg-imgs/user-black.png);
+}
+
+aside nav ul a .icon-search, aside nav ul button .icon-search {
+  background-image: url(bg-imgs/search-black.png);
+}
+
+aside nav ul a .icon-notifications, aside nav ul button .icon-notifications {
+  background-image: url(bg-imgs/notifications-black.png);
+}
+
+aside nav ul a .icon-messages, aside nav ul button .icon-messages {
+  background-image: url(bg-imgs/messages-black.png);
+}
+
+aside nav ul a .icon-statistics, aside nav ul button .icon-statistics {
+  background-image: url(bg-imgs/stat-black.png);
+}
+
+aside nav ul a .icon-exit, aside nav ul button .icon-exit {
+  background-image: url(bg-imgs/exit-black.png);
+}
+
+aside nav ul a:hover div.title, aside nav ul button:hover div.title {
   background-image: -webkit-gradient(linear, left top, right top, from(#FF512F), to(#F09819));
   background-image: linear-gradient(to right, #FF512F, #F09819);
   -webkit-background-clip: text;
@@ -533,9 +564,36 @@ aside nav ul a:hover div, aside nav ul button:hover div {
   text-fill-color: transparent;
 }
 
-aside nav ul a:hover img, aside nav ul a.active img, aside nav ul button:hover img, aside nav ul button.active img {
-  -o-object-position: center bottom;
-     object-position: center bottom;
+aside nav ul a:hover .icon-home, aside nav ul a.active .icon-home, aside nav ul button:hover .icon-home, aside nav ul button.active .icon-home {
+  background-image: url(bg-imgs/home-gradient.png);
+}
+
+aside nav ul a:hover .icon-video, aside nav ul a.active .icon-video, aside nav ul button:hover .icon-video, aside nav ul button.active .icon-video {
+  background-image: url(bg-imgs/video-gradient.png);
+}
+
+aside nav ul a:hover .icon-user, aside nav ul a.active .icon-user, aside nav ul button:hover .icon-user, aside nav ul button.active .icon-user {
+  background-image: url(bg-imgs/user-gradient.png);
+}
+
+aside nav ul a:hover .icon-search, aside nav ul a.active .icon-search, aside nav ul button:hover .icon-search, aside nav ul button.active .icon-search {
+  background-image: url(bg-imgs/search-gradient.png);
+}
+
+aside nav ul a:hover .icon-notifications, aside nav ul a.active .icon-notifications, aside nav ul button:hover .icon-notifications, aside nav ul button.active .icon-notifications {
+  background-image: url(bg-imgs/notifications-gradient.png);
+}
+
+aside nav ul a:hover .icon-messages, aside nav ul a.active .icon-messages, aside nav ul button:hover .icon-messages, aside nav ul button.active .icon-messages {
+  background-image: url(bg-imgs/messages-gradient.png);
+}
+
+aside nav ul a:hover .icon-statistics, aside nav ul a.active .icon-statistics, aside nav ul button:hover .icon-statistics, aside nav ul button.active .icon-statistics {
+  background-image: url(bg-imgs/stat-gradient.png);
+}
+
+aside nav ul a:hover .icon-exit, aside nav ul a.active .icon-exit, aside nav ul button:hover .icon-exit, aside nav ul button.active .icon-exit {
+  background-image: url(bg-imgs/exit-gradient.png);
 }
 
 aside nav ul a.active::after, aside nav ul button.active::after {

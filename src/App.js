@@ -3,7 +3,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles/style.min.css';
 import MainNav from './components/MainNav';
 import AppRouter from './components/AppRouter';
-
 import MobileFooter from "./components/MobileFooter";
 
 function App() {
@@ -14,10 +13,10 @@ function App() {
           <div className="fs-11 fw-6">@drugoiacc</div>
           <div className="d-flex align-items-center">
             <button type="button">
-              <img src="../img/icons/add.svg" alt="Опубликовать"/>
+              <img src="/online-web/img/icons/add.svg" alt="Опубликовать"/>
             </button>
             <button type="button" className="ms-4">
-              <img src="../img/icons/burger.svg" alt="Меню"/>
+              <img src="/online-web/img/icons/burger.svg" alt="Меню"/>
             </button>
           </div>
         </header>
