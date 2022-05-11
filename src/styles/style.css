@@ -26,6 +26,12 @@ h2 {
   margin-bottom: .5em;
 }
 
+@media (max-width: 575px) {
+  h2 {
+    margin-bottom: .25em;
+  }
+}
+
 .fs-07 {
   font-size: 0.7em;
 }
@@ -229,6 +235,12 @@ button {
   font-weight: 500;
 }
 
+@media (max-width: 575px) {
+  .btn {
+    border-radius: 4px;
+  }
+}
+
 .btn-1 {
   background-image: -webkit-gradient(linear, left top, right top, from(#FF512F), color-stop(#F09819), color-stop(#F09819), to(#FF512F));
   background-image: linear-gradient(to right, #FF512F, #F09819, #F09819, #FF512F);
@@ -276,6 +288,12 @@ button {
   border-radius: 8px;
 }
 
+@media (max-width: 575px) {
+  .btn-2::after {
+    border-radius: 2px;
+  }
+}
+
 .btn-3 {
   background-color: #F9F9F9;
 }
@@ -310,6 +328,12 @@ body {
 @media (max-width: 991px) {
   body {
     font-size: 16px;
+  }
+}
+
+@media (max-width: 575px) {
+  body {
+    font-size: 14px;
   }
 }
 
@@ -544,6 +568,13 @@ aside nav ul a.active::after, aside nav ul button.active::after {
   }
 }
 
+@media (max-width: 575px) {
+  .photo {
+    --unit: 1px;
+    --radius: 10px;
+  }
+}
+
 .photo img {
   width: 100%;
   height: 100%;
@@ -599,6 +630,12 @@ main {
   main {
     -webkit-box-shadow: unset;
             box-shadow: unset;
+  }
+}
+
+@media (max-width: 575px) {
+  main {
+    padding: 1em 0;
   }
 }
 
@@ -671,6 +708,18 @@ header a:hover img, header a.active img {
      object-position: center bottom;
 }
 
+.user-info .mob-photo {
+  margin-left: 1em;
+}
+
+.user-info .mob-photo img {
+  width: 90px;
+  height: 90px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 20px;
+}
+
 .user-info .photo {
   --unit: 6px;
   --radius: 40px;
@@ -713,18 +762,24 @@ header a:hover img, header a.active img {
   line-height: 1.5em;
 }
 
+@media (max-width: 575px) {
+  .user-info .about-yourself {
+    line-height: 1.25em;
+    font-weight: 400;
+  }
+}
+
 .user-info .about-yourself .more {
   color: #8D8D8D;
 }
 
 .topical {
   position: relative;
-  padding: 0 3em;
 }
 
-@media (max-width: 767px) {
+@media (min-width: 768px) {
   .topical {
-    padding: 0;
+    padding: 0 3em !important;
   }
 }
 
@@ -768,7 +823,7 @@ header a:hover img, header a.active img {
 
 @media (max-width: 1199px) {
   .topical .swiper .swiper-slide {
-    width: 90px;
+    width: 80px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -785,6 +840,12 @@ header a:hover img, header a.active img {
   }
 }
 
+@media (max-width: 575px) {
+  .topical .swiper .swiper-slide {
+    width: 50px;
+  }
+}
+
 .topical .swiper .swiper-slide .photo {
   height: 100px;
   width: 100px;
@@ -794,6 +855,27 @@ header a:hover img, header a.active img {
   .topical .swiper .swiper-slide .photo {
     width: 80px;
     height: 80px;
+  }
+}
+
+@media (max-width: 575px) {
+  .topical .swiper .swiper-slide .photo {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+.topical .swiper .swiper-slide .title {
+  font-size: .8em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+}
+
+@media (max-width: 575px) {
+  .topical .swiper .swiper-slide .title {
+    font-size: .7em;
   }
 }
 
@@ -811,6 +893,13 @@ header a:hover img, header a.active img {
   margin-bottom: 1em;
 }
 
+@media (max-width: 767px) {
+  .publications .btn-group {
+    border-top: none;
+    border-bottom: 1px solid #EAEAEA;
+  }
+}
+
 .publications .btn-group button {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -822,6 +911,21 @@ header a:hover img, header a.active img {
       -ms-flex-align: center;
           align-items: center;
   padding-top: .5em;
+}
+
+@media (max-width: 767px) {
+  .publications .btn-group button {
+    padding-top: 0;
+    padding-bottom: .5em;
+  }
+}
+
+@media (max-width: 575px) {
+  .publications .btn-group button {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
 }
 
 .publications .btn-group button svg {
@@ -846,6 +950,14 @@ header a:hover img, header a.active img {
   height: 4px;
   background-image: -webkit-gradient(linear, left bottom, left top, from(#FF512F), to(#F09819));
   background-image: linear-gradient(to top, #FF512F, #F09819);
+}
+
+@media (max-width: 767px) {
+  .publications .btn-group button.active::before {
+    top: unset;
+    bottom: -1px;
+    height: 2px;
+  }
 }
 
 .publications .btn-group button.active svg path {
@@ -880,7 +992,14 @@ header a:hover img, header a.active img {
 
 @media (max-width: 767px) {
   .publications .post {
-    height: 29vw;
+    height: 30vw;
+    border-radius: 0px;
+  }
+}
+
+@media (max-width: 575px) {
+  .publications .post {
+    height: 27vw;
   }
 }
 
