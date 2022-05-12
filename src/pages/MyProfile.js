@@ -1,9 +1,11 @@
 import React, {useState} from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, FreeMode } from 'swiper';
+import { Navigation, FreeMode, Pagination, EffectFade } from 'swiper';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/free-mode';
+import 'swiper/css/effect-fade';
+import 'swiper/css/pagination';
 import Header from "../components/Header";
 import TextAbout from '../components/utilities/TextAbout';
 
@@ -22,7 +24,7 @@ export default function MyProfile() {
                                 <h1 className='d-none d-md-block'>@alexanr</h1>
                                 <h2>Александра Андреева</h2>
                                 <div className="fs-09 blue"><a href="mailto:saitname@site.com">saitname@site.com</a></div>
-                                <TextAbout className="mt-2 mt-sm-4" text="Профессионально занимаюсь подбором стиля одежды для ваших фот Профессионально занимаюсь подбором стиля одежды для ваших фот"/>
+                                <TextAbout className="mt-2 mt-sm-4" text={null}/>
                             </div>
                             <div className="d-block d-sm-none mob-photo empty">
                                 <img src="../img/users/empty-photo.svg" alt="Пользователь"/>
@@ -201,10 +203,34 @@ export default function MyProfile() {
                         (content === 'photo') ?
                         <div className="row row-cols-3 g-1 g-sm-2 g-md-3 g-lg-4">
                             <div>
-                                <img src="../img/img1.png" alt="пост" className="post"/>
+                                <Swiper
+                                    className='post'
+                                    modules={[Pagination, EffectFade]}
+                                    slidesPerView={1}
+                                    pagination={{ clickable: true }}
+                                    effect="fade"
+                                >
+                                    <SwiperSlide>
+                                        <img src="../img/img1.png" alt="пост" className="post"/>
+                                    </SwiperSlide>
+                                    <SwiperSlide>
+                                        <img src="../img/photo.png" alt="пост" className="post"/>
+                                    </SwiperSlide>
+                                </Swiper>
+                                
                             </div>
                             <div>
-                                <img src="../img/img1.png" alt="пост" className="post"/>
+                                <Swiper
+                                    className='post'
+                                    modules={[Pagination, EffectFade]}
+                                    slidesPerView={1}
+                                    pagination={{ clickable: true }}
+                                    effect="fade"
+                                >
+                                    <SwiperSlide>
+                                        <img src="../img/img1.png" alt="пост" className="post"/>
+                                    </SwiperSlide>
+                                </Swiper>
                             </div>
                             <div>
                                 <img src="../img/img1.png" alt="пост" className="post"/>
@@ -222,29 +248,7 @@ export default function MyProfile() {
                                 <img src="../img/img1.png" alt="пост" className="post"/>
                             </div>
                         </div>
-                        : <div className="row row-cols-3 g-1 g-sm-2 g-md-3 g-lg-4">
-                            <div>
-                                <img src="../img/img1.png" alt="видео" className="video"/>
-                            </div>
-                            <div>
-                                <img src="../img/img1.png" alt="видео" className="video"/>
-                            </div>
-                            <div>
-                                <img src="../img/img1.png" alt="видео" className="video"/>
-                            </div>
-                            <div>
-                                <img src="../img/img1.png" alt="видео" className="video"/>
-                            </div>
-                            <div>
-                                <img src="../img/img1.png" alt="видео" className="video"/>
-                            </div>
-                            <div>
-                                <img src="../img/img1.png" alt="видео" className="video"/>
-                            </div>+
-                            <div>
-                                <img src="../img/img1.png" alt="видео" className="video"/>
-                            </div>
-                        </div>
+                        : <div className='gray text-center'>Нет загруженных видео</div>
                     }
                     
                 </div>                     

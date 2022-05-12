@@ -184,7 +184,7 @@ button {
   opacity: .5;
 }
 
-h1 {
+h1, .h1 {
   font-size: 1.5em;
   font-weight: 600;
   text-align: left;
@@ -1201,6 +1201,40 @@ header a:hover img, header a.active img {
     height: 40vw;
     border-radius: 0px;
   }
+}
+
+.publications .swiper-pagination-bullet {
+  opacity: 1;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.publications .swiper-pagination-bullet-active {
+  background-color: #F77424;
+}
+
+/* Postfeed */
+.post-card {
+  --padd: 4em;
+}
+
+.post-card .top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-right: var(--padd);
+}
+
+.post-card .top .photo {
+  --unit: 2px;
+  --radius: 20px;
+  width: 60px;
+  height: 60px;
 }
 
 footer {

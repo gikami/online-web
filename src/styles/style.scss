@@ -150,7 +150,7 @@ button {
 }
 
 
-h1 {
+h1, .h1 {
     font-size: 1.5em;
     font-weight: 600;
     text-align: left;
@@ -767,8 +767,34 @@ header {
             border-radius: 0px;
         }
     }
+    .swiper-pagination {
+        &-bullet {
+            opacity: 1;
+            background: rgba(255, 255, 255, 0.5);
+            &-active {
+                background-color: $orange;
+            }
+        }
+    }
 }
 
+/* Postfeed */
+.post-card {
+    --padd: 4em;
+    .top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-right: var(--padd);
+        .photo {
+            --unit: 2px;
+            --radius: 20px;
+            width: 60px;
+            height: 60px;
+        }
+    }
+    
+}
 
 footer {
     position: fixed;
