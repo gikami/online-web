@@ -5,13 +5,13 @@ export default function MainNav(props) {
 
     return (
         <aside>
-            <img src="/online-web/img/logo.svg" className="d-block mx-auto mb-3"/>
+            <img src="../img/logo.svg" className="d-block mx-auto mb-3"/>
             <div className='fw-6 text-center'>Online</div>
             {
                 (location.pathname !== '/my-profile') &&
                 <div className="my-info mt-4 mt-xxl-5">
                     <div className="photo mx-auto mb-3">
-                        <img src="/online-web/img/users/user0.png" className="d-block mx-auto mb-3"/>
+                        <img src="../img/users/user0.png" className="d-block mx-auto mb-3"/>
                     </div>
                     <div className="d-none d-xl-block fs-12 fw-5">Вероника Евгеньева</div>
                     <div className="d-none d-xl-block gray mt-2">@evgenievaaa</div>

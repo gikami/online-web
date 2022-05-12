@@ -1,4 +1,4 @@
-import { HashRouter } from "react-router-dom";
+import { HashRouter, BrowserRouter } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import './styles/style.min.css';
@@ -9,16 +9,16 @@ import { IoCloseOutline } from "react-icons/io5";
 
 function App() {
   return (
-    <HashRouter>
+    <BrowserRouter>
       <div className="container-xl py-xl-4">
         <header className="d-flex d-md-none">
           <div className="fs-11 fw-6">@drugoiacc</div>
           <div className="d-flex align-items-center">
             <button type="button">
-              <img src="/online-web/img/icons/add.svg" alt="Опубликовать"/>
+              <img src="../img/icons/add.svg" alt="Опубликовать"/>
             </button>
             <button type="button" className="ms-4">
-              <img src="/online-web/img/icons/burger.svg" alt="Меню"/>
+              <img src="../img/icons/burger.svg" alt="Меню"/>
             </button>
           </div>
         </header>
@@ -46,15 +46,15 @@ function App() {
               </div>
               <ul className="row row-cols-3 row-cols-lg-4 row-cols-xl-5 justify-content-center gx-2 gx-sm-4 gx-lg-5 mt-3 mt-sm-4 mt-lg-5 text-uppercase">
                 <li className="position-relative">
-                  <img src="/online-web/img/google.png" alt="play market"/>
+                  <img src="../img/google.png" alt="play market"/>
                   <a href="" className="btn btn-1 pastel w-100 fw-6 mt-2 mt-lg-4">Перейти</a>
                 </li>
                 <li className="position-relative">
-                  <img src="/online-web/img/apple.png" alt="apple store"/>
+                  <img src="../img/apple.png" alt="apple store"/>
                   <a className="btn btn-2 pastel w-100 fw-6 mt-2 mt-lg-4"><span>Скоро</span></a>
                 </li>
                 <li className="position-relative">
-                  <img src="/online-web/img/huawei.png" alt="Huawei AppGallery"/>
+                  <img src="../img/huawei.png" alt="Huawei AppGallery"/>
                   <a className="btn btn-2 pastel w-100 fw-6 mt-2 mt-lg-4"><span>Скоро</span></a>
                 </li>
               </ul>
@@ -62,7 +62,7 @@ function App() {
         </div>
       </div>
 
-    </HashRouter>
+    </BrowserRouter>
   );
 }
 

@@ -7,27 +7,27 @@ export default function MobileFooter() {
                 <ul>
                     <li>
                         <NavLink to="/">
-                            <img src="/online-web/img/icons/home-sprite.png" alt="home"/>
+                            <img src="../img/icons/home-sprite.png" alt="home"/>
                         </NavLink>
                     </li>
                     <li>
                         <NavLink to="search" data-bs-toggle="modal" data-bs-target="#announcement">
-                            <img src="/online-web/img/icons/search-sprite.png" alt="search"/>
+                            <img src="../img/icons/search-sprite.png" alt="search"/>
                         </NavLink>
                     </li>
                     <li>
                         <NavLink to="reels" data-bs-toggle="modal" data-bs-target="#announcement">
-                            <img src="/online-web/img/icons/video-sprite.png" alt="Reels"/>
+                            <img src="../img/icons/video-sprite.png" alt="Reels"/>
                         </NavLink>
                     </li>
                     <li>
                         <NavLink to="messages" data-bs-toggle="modal" data-bs-target="#announcement">
-                            <img src="/online-web/img/icons/messages-sprite.png" alt="messages"/>
+                            <img src="../img/icons/messages-sprite.png" alt="messages"/>
                         </NavLink>
                     </li>
                     <li>
                         <NavLink to="my-profile">
-                            <img src="/online-web/img/photo.png" alt="Имя"/>
+                            <img src="../img/photo.png" alt="Имя"/>
                         </NavLink>
                     </li>
                 </ul>

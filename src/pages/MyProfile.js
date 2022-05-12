@@ -25,7 +25,7 @@ export default function MyProfile() {
                                 <TextAbout className="mt-2 mt-sm-4" text="Профессионально занимаюсь подбором стиля одежды для ваших фот Профессионально занимаюсь подбором стиля одежды для ваших фот"/>
                             </div>
                             <div className="d-block d-sm-none mob-photo empty">
-                                <img src="/online-web/img/users/empty-photo.svg" alt="Пользователь"/>
+                                <img src="../img/users/empty-photo.svg" alt="Пользователь"/>
                             </div>
                         </div>
                         <div className="brief-stat d-flex justify-content-around justify-content-xl-between mt-2 mt-sm-3 mt-lg-4">
@@ -50,7 +50,7 @@ export default function MyProfile() {
                     </div>
                     <div className="d-none d-sm-block col-sm-5">
                         <div className="photo empty">
-                            <img src="/online-web/img/users/empty-photo.svg" alt="Пользователь"/>
+                            <img src="../img/users/empty-photo.svg" alt="Пользователь"/>
                         </div>
                     </div>
                 </div>
@@ -91,73 +91,73 @@ export default function MyProfile() {
                 >
                     <SwiperSlide>
                         <div className="photo">
-                            <img src="/online-web/img/users/user0.png" alt="Александра Андреева"/>
+                            <img src="../img/users/user0.png" alt="Александра Андреева"/>
                         </div>
                         <div className="title mt-1 mt-xl-2">Актуальное</div>
                     </SwiperSlide>
                     <SwiperSlide>
                         <div className="photo">
-                            <img src="/online-web/img/users/user0.png" alt="Александра Андреева"/>
+                            <img src="../img/users/user0.png" alt="Александра Андреева"/>
                         </div>
                         <div className="title mt-1 mt-xl-2">Актуальное</div>
                     </SwiperSlide>
                     <SwiperSlide>
                         <div className="photo">
-                            <img src="/online-web/img/users/user0.png" alt="Александра Андреева"/>
+                            <img src="../img/users/user0.png" alt="Александра Андреева"/>
                         </div>
                         <div className="title mt-1 mt-xl-2">Актуальное</div>
                     </SwiperSlide>
                     <SwiperSlide>
                         <div className="photo">
-                            <img src="/online-web/img/users/user0.png" alt="Александра Андреева"/>
+                            <img src="../img/users/user0.png" alt="Александра Андреева"/>
                         </div>
                         <div className="title mt-1 mt-xl-2">Актуальное</div>
                     </SwiperSlide>
                     <SwiperSlide>
                         <div className="photo">
-                            <img src="/online-web/img/users/user0.png" alt="Александра Андреева"/>
+                            <img src="../img/users/user0.png" alt="Александра Андреева"/>
                         </div>
                         <div className="title mt-1 mt-xl-2">Актуальное</div>
                     </SwiperSlide>
                     <SwiperSlide>
                         <div className="photo">
-                            <img src="/online-web/img/users/user0.png" alt="Александра Андреева"/>
+                            <img src="../img/users/user0.png" alt="Александра Андреева"/>
                         </div>
                         <div className="title mt-1 mt-xl-2">Актуальное</div>
                     </SwiperSlide>
                     <SwiperSlide>
                         <div className="photo">
-                            <img src="/online-web/img/users/user0.png" alt="Александра Андреева"/>
+                            <img src="../img/users/user0.png" alt="Александра Андреева"/>
                         </div>
                         <div className="title mt-1 mt-xl-2">Актуальное</div>
                     </SwiperSlide>
                     <SwiperSlide>
                         <div className="photo">
-                            <img src="/online-web/img/users/user0.png" alt="Александра Андреева"/>
+                            <img src="../img/users/user0.png" alt="Александра Андреева"/>
                         </div>
                         <div className="title mt-1 mt-xl-2">Актуальное</div>
                     </SwiperSlide>
                     <SwiperSlide>
                         <div className="photo">
-                            <img src="/online-web/img/users/user0.png" alt="Александра Андреева"/>
+                            <img src="../img/users/user0.png" alt="Александра Андреева"/>
                         </div>
                         <div className="title mt-1 mt-xl-2">Актуальное</div>
                     </SwiperSlide>
                     <SwiperSlide>
                         <div className="photo">
-                            <img src="/online-web/img/users/user0.png" alt="Александра Андреева"/>
+                            <img src="../img/users/user0.png" alt="Александра Андреева"/>
                         </div>
                         <div className="title mt-1 mt-xl-2">Актуальное</div>
                     </SwiperSlide>
                     <SwiperSlide>
                         <div className="photo">
-                            <img src="/online-web/img/users/user0.png" alt="Александра Андреева"/>
+                            <img src="../img/users/user0.png" alt="Александра Андреева"/>
                         </div>
                         <div className="title mt-1 mt-xl-2">Актуальное</div>
                     </SwiperSlide>
                     <SwiperSlide>
                         <div className="photo">
-                            <img src="/online-web/img/users/user0.png" alt="Александра Андреева"/>
+                            <img src="../img/users/user0.png" alt="Александра Андреева"/>
                         </div>
                         <div className="title mt-1 mt-xl-2">Актуальное</div>
                     </SwiperSlide>
@@ -201,48 +201,48 @@ export default function MyProfile() {
                         (content === 'photo') ?
                         <div className="row row-cols-3 g-1 g-sm-2 g-md-3 g-lg-4">
                             <div>
-                                <img src="/online-web/img/img1.png" alt="пост" className="post"/>
+                                <img src="../img/img1.png" alt="пост" className="post"/>
                             </div>
                             <div>
-                                <img src="/online-web/img/img1.png" alt="пост" className="post"/>
+                                <img src="../img/img1.png" alt="пост" className="post"/>
                             </div>
                             <div>
-                                <img src="/online-web/img/img1.png" alt="пост" className="post"/>
+                                <img src="../img/img1.png" alt="пост" className="post"/>
                             </div>
                             <div>
-                                <img src="/online-web/img/img1.png" alt="пост" className="post"/>
+                                <img src="../img/img1.png" alt="пост" className="post"/>
                             </div>
                             <div>
-                                <img src="/online-web/img/img1.png" alt="пост" className="post"/>
+                                <img src="../img/img1.png" alt="пост" className="post"/>
                             </div>
                             <div>
-                                <img src="/online-web/img/img1.png" alt="пост" className="post"/>
+                                <img src="../img/img1.png" alt="пост" className="post"/>
                             </div>
                             <div>
-                                <img src="/online-web/img/img1.png" alt="пост" className="post"/>
+                                <img src="../img/img1.png" alt="пост" className="post"/>
                             </div>
                         </div>
                         : <div className="row row-cols-3 g-1 g-sm-2 g-md-3 g-lg-4">
                             <div>
-                                <img src="/online-web/img/img1.png" alt="видео" className="video"/>
+                                <img src="../img/img1.png" alt="видео" className="video"/>
                             </div>
                             <div>
-                                <img src="/online-web/img/img1.png" alt="видео" className="video"/>
+                                <img src="../img/img1.png" alt="видео" className="video"/>
                             </div>
                             <div>
-                                <img src="/online-web/img/img1.png" alt="видео" className="video"/>
+                                <img src="../img/img1.png" alt="видео" className="video"/>
                             </div>
                             <div>
-                                <img src="/online-web/img/img1.png" alt="видео" className="video"/>
+                                <img src="../img/img1.png" alt="видео" className="video"/>
                             </div>
                             <div>
-                                <img src="/online-web/img/img1.png" alt="видео" className="video"/>
+                                <img src="../img/img1.png" alt="видео" className="video"/>
                             </div>
                             <div>
-                                <img src="/online-web/img/img1.png" alt="видео" className="video"/>
+                                <img src="../img/img1.png" alt="видео" className="video"/>
                             </div>+
                             <div>
-                                <img src="/online-web/img/img1.png" alt="видео" className="video"/>
+                                <img src="../img/img1.png" alt="видео" className="video"/>
                             </div>
                         </div>
                     }
