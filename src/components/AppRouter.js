@@ -6,18 +6,18 @@ import MyProfile from '../pages/MyProfile';
 import UserProfile from '../pages/UserProfile';
 
 export default function AppRouter() {
-    const Wrapper = ({children}) => {
+    const Wrapper = ({ children }) => {
         const location = useLocation();
         useLayoutEffect(() => {
-          document.documentElement.scrollTo(0, 0);
+            document.documentElement.scrollTo(0, 0);
         }, [location.pathname]);
         return children
-    } 
-   
+    }
+
     return (
         <Wrapper>
             <Routes>
-                <Route exact path="/" element={<UserProfile />} />
+                <Route exact path="/user/:id" element={<UserProfile />} />
                 <Route exact path="/my-profile" element={<MyProfile />} />
             </Routes>
         </Wrapper>
