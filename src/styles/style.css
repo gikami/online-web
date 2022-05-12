@@ -1203,6 +1203,15 @@ header a:hover img, header a.active img {
   }
 }
 
+.publications .swiper-pagination-bullet {
+  opacity: 1;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.publications .swiper-pagination-bullet-active {
+  background-color: #F77424;
+}
+
 footer {
   position: fixed;
   bottom: 0px;

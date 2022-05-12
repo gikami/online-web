@@ -767,6 +767,15 @@ header {
             border-radius: 0px;
         }
     }
+    .swiper-pagination {
+        &-bullet {
+            opacity: 1;
+            background: rgba(255, 255, 255, 0.5);
+            &-active {
+                background-color: $orange;
+            }
+        }
+    }
 }
 
 
