@@ -15,15 +15,15 @@ export default function Header(props) {
                 </form>
             </div>
             <div className="d-flex align-items-center">
-                <Link to="notifications" className="me-3">
+                <Link to='notifications' data-bs-toggle="modal" data-bs-target="#announcement" className="me-3">
                     <img src="/online-web/img/icons/notifications-sprite.png" alt="notifications"/>
                     <div className='indicator active'></div>
                 </Link>
-                <Link to="messages" className="me-3">
+                <Link to='messages' data-bs-toggle="modal" data-bs-target="#announcement" className="me-3">
                     <img src="/online-web/img/icons/messages-sprite.png" alt="messages"/>
                     <div className='indicator active'></div>
                 </Link>
-                <button type="button" className="btn btn-1">
+                <button type="button" className="btn btn-1" data-bs-toggle="modal" data-bs-target="#announcement">
                     <IconContext.Provider value={{className: "white fs-12", title: "Опубликовать" }}>
                         <IoAddCircleOutline />
                     </IconContext.Provider>

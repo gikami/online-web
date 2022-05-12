@@ -11,17 +11,17 @@ export default function MobileFooter() {
                         </NavLink>
                     </li>
                     <li>
-                        <NavLink to="search">
+                        <NavLink to="search" data-bs-toggle="modal" data-bs-target="#announcement">
                             <img src="/online-web/img/icons/search-sprite.png" alt="search"/>
                         </NavLink>
                     </li>
                     <li>
-                        <NavLink to="reels">
+                        <NavLink to="reels" data-bs-toggle="modal" data-bs-target="#announcement">
                             <img src="/online-web/img/icons/video-sprite.png" alt="Reels"/>
                         </NavLink>
                     </li>
                     <li>
-                        <NavLink to="messages">
+                        <NavLink to="messages" data-bs-toggle="modal" data-bs-target="#announcement">
                             <img src="/online-web/img/icons/messages-sprite.png" alt="messages"/>
                         </NavLink>
                     </li>

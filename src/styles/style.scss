@@ -3,8 +3,10 @@
 $main-font: "Nunito";
 $background-color: #F9F9F9;
 $gradient: linear-gradient(to right, #FF512F, #F09819);
-$gradient-pastel: linear-gradient(to bottom right, #FFAC68, #FF7188);
+
 $gradient-full: linear-gradient(to right, #FF512F, #F09819, #F09819, #FF512F);
+$gradient-pastel: linear-gradient(to bottom right, #FFAC68, #FF7188);
+$gradient-pastel-full: linear-gradient(to right, #FFAC68, #FF7188, #FF7188, #FFAC68);
 $radius: 8px;
 $orange: #F77424;
 $gray: #8D8D8D;
@@ -34,57 +36,6 @@ p, label, span, a, form, select, div, blockquote, cite, figure, figcaption, tabl
   line-height: normal;
   margin-bottom: 0px;
 }
-
-h1 {
-    font-size: 1.5em;
-    font-weight: 600;
-    text-align: left;
-    margin-bottom: .5em;
-}
-h2 {
-    font-size: 1.1em;
-    font-weight: 500;
-    text-align: left;
-    margin-bottom: .5em;
-    @media (max-width: 575px){
-        margin-bottom: .25em;
-    }
-}
-.fs {
-    &-07 {font-size: 0.7em;}
-    &-075 {font-size: 0.75em;}
-    &-08 {font-size: 0.8em;}
-    &-09 {font-size: 0.9em;}
-    &-11 {font-size: 1.1em;}
-    &-12 {font-size: 1.2em;}
-    &-13 {font-size: 1.3em;}
-    &-14 {font-size: 1.4em;}
-    &-15 {font-size: 1.5em;}
-    &-16 {font-size: 1.6em;}
-    &-17 {font-size: 1.7em;}
-    &-18 {font-size: 1.8em;}
-    &-19 {font-size: 1.9em;}
-    &-20 {font-size: 2em;}
-    &-25 {font-size: 2.5em;}
-}
-.fw {
-    &-3 {font-weight: 300;}
-    &-4 {font-weight: 400;}
-    &-5 {font-weight: 500;}
-    &-6 {font-weight: 600;}
-    &-7 {font-weight: 700;}
-    &-8 {font-weight: 800;}
-    &-9 {font-weight: 900;}
-}
-.black {color: #000;}
-.white {color: #fff;}
-.gray {color: $gray;}
-.blue {color: #0280B7;}
-
-.text-gradient {
-    @include text-gradient();
-}
-.flex-1 {flex:1;}
 
 /* FORMS CUSTOMIZATION */
 input,
@@ -140,6 +91,7 @@ button {
     font-size: 1em;
     line-height: normal;
     font-weight: 500;
+    transition: .3s;
     @media (max-width: 575px){
         border-radius: 4px;  
     }
@@ -149,6 +101,9 @@ button {
         background-position: left center;
         background-repeat: no-repeat;
         color: #fff;
+        &.pastel {
+            background-image: $gradient-pastel-full;
+        }
         &:hover, &:focus, &:active {
             background-position: right center;
             color: #fff;
@@ -163,10 +118,13 @@ button {
         color: #fff;
         position: relative;
         z-index: 0;
+        &.pastel {
+            background-image: $gradient-pastel-full;
+        }
         span {
             @include text-gradient();
         }
-        &::after {
+        &::before {
             content: '';
             position: absolute;
             z-index: -1;
@@ -190,6 +148,60 @@ button {
         opacity: .5;
     }
 }
+
+
+h1 {
+    font-size: 1.5em;
+    font-weight: 600;
+    text-align: left;
+    margin-bottom: .5em;
+}
+h2 {
+    font-size: 1.1em;
+    font-weight: 500;
+    text-align: left;
+    margin-bottom: .5em;
+    @media (max-width: 575px){
+        margin-bottom: .25em;
+    }
+}
+.fs {
+    &-07 {font-size: 0.7em;}
+    &-075 {font-size: 0.75em;}
+    &-08 {font-size: 0.8em;}
+    &-09 {font-size: 0.9em;}
+    &-11 {font-size: 1.1em;}
+    &-12 {font-size: 1.2em;}
+    &-13 {font-size: 1.3em;}
+    &-14 {font-size: 1.4em;}
+    &-15 {font-size: 1.5em;}
+    &-16 {font-size: 1.6em;}
+    &-17 {font-size: 1.7em;}
+    &-18 {font-size: 1.8em;}
+    &-19 {font-size: 1.9em;}
+    &-20 {font-size: 2em;}
+    &-25 {font-size: 2.5em;}
+}
+.fw {
+    &-3 {font-weight: 300;}
+    &-4 {font-weight: 400;}
+    &-5 {font-weight: 500;}
+    &-6 {font-weight: 600;}
+    &-7 {font-weight: 700;}
+    &-8 {font-weight: 800;}
+    &-9 {font-weight: 900;}
+}
+.black {color: #000;}
+.white {color: #fff;}
+.gray {color: $gray;}
+.blue {color: #0280B7;}
+
+.text-gradient {
+    @include text-gradient();
+}
+.flex-1 {flex:1;}
+
+
 
 
 body {
@@ -807,6 +819,80 @@ footer {
                     }
                 }
             }
+        }
+    }
+}
+
+.modal {
+    .modal-content {
+        background-image: url(bg-imgs/modal.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center top;
+        padding: 16em 2em 4em;
+        border-radius: 80px;
+        box-shadow:0px 0px 0px 5px rgba(255, 255, 255, 0.5) inset;
+        @media (max-width: 991px){
+            padding: 10em 1.5em 1.5em;
+            border-radius: 40px;
+        }
+        @media (max-width: 575px){
+            padding: 6em 1em 1em;
+            border-radius: 20px;
+        }
+    }
+    .btn-close {
+        position: absolute;
+        top: 1em;
+        right: 1em;
+        background: unset;
+        padding: 0px;
+        opacity: .75;
+        font-size: 2em;
+        color: #fff;
+        @include flex-center();
+        &:hover, &:focus, &:active {opacity: 1;}
+        @media (max-width: 575px){
+            color: #000;
+            top: .5em;
+            right: .5em;
+        }
+    }
+    ul {
+        list-style: none;
+        padding: 0px;
+        text-align: center;
+        font-size: 1.1em;
+        @media (max-width: 991px){
+            font-size: 1em;
+        }
+        @media (max-width: 575px){
+            font-size: .8em;
+        }
+        .btn {
+            border-radius: 25px;
+            &::before {
+                border-radius: 23px;
+            }
+        }
+        img {
+            max-width: 100%;
+            @media (max-width: 991px){
+                max-width: 60%;
+            }
+        }
+    }
+    .text {
+        font-size: 25px;
+        @media (max-width: 1199px){
+            font-size: 19px;
+        }
+        @media (max-width: 991px){
+            font-size: 16px;
+            .fs-20 {font-size: 1.5em;}
+        }
+        @media (max-width: 575px){
+            font-size: 11px;
         }
     }
 }

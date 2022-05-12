@@ -44,7 +44,7 @@ export default function MyProfile() {
                                 <div className="gray fs-08 fw-5 mt-1 mt-sm-2">Подписки</div>
                             </div>
                         </div>
-                        <button type="button" className="btn btn-2 w-100 mt-2 mt-sm-3 mt-lg-4">
+                        <button type="button" data-bs-toggle="modal" data-bs-target="#announcement" className="btn btn-2 w-100 mt-2 mt-sm-3 mt-lg-4">
                             <span>Редактировать профиль</span>
                         </button>
                     </div>
@@ -57,7 +57,7 @@ export default function MyProfile() {
             </section>
 
             <section className="px-3 px-sm-0 topical my-profile mt-2 mt-sm-4 mt-lg-5">
-                <button type='button' className='btn-add me-2 me-sm-3 me-lg-4'>
+                <button type='button' data-bs-toggle="modal" data-bs-target="#announcement" className='btn-add me-2 me-sm-3 me-lg-4'>
                     <div className='photo'>
                         <div className='wrapper'>
                             <svg viewBox="0 0 29 29" xmlns="http://www.w3.org/2000/svg">

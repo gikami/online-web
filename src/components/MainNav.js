@@ -42,7 +42,7 @@ export default function MainNav(props) {
                         </NavLink>
                     </li>
                     <li>
-                        <NavLink to="reels">
+                        <NavLink to="reels" data-bs-toggle="modal" data-bs-target="#announcement">
                             <div className='icon icon-video'></div>
                             <div className='title'>Видео Reels</div>
                         </NavLink>
@@ -54,27 +54,27 @@ export default function MainNav(props) {
                         </NavLink>
                     </li>
                     <li>
-                        <NavLink to="search">
+                        <NavLink to="search" data-bs-toggle="modal" data-bs-target="#announcement">
                             <div className='icon icon-search'></div>
                             <div className='title'>Поиск</div>
                         </NavLink>
                     </li>
                     <li>
-                        <NavLink to="notifications">
+                        <NavLink to="notifications" data-bs-toggle="modal" data-bs-target="#announcement">
                             <div className='icon icon-notifications'></div>
                             <div className='title'>Уведомления</div>
                             <span>2</span>
                         </NavLink>
                     </li>
                     <li>
-                        <NavLink to="messages">
+                        <NavLink to="messages" data-bs-toggle="modal" data-bs-target="#announcement">
                             <div className='icon icon-messages'></div>
                             <div className='title'>Сообщения</div>
                             <span>12</span>
                         </NavLink>
                     </li>
                     <li>
-                        <NavLink to="statistics">
+                        <NavLink to="statistics" data-bs-toggle="modal" data-bs-target="#announcement">
                             <div className='icon icon-statistics'></div>
                             <div className='title'>Статистика</div>
                         </NavLink>

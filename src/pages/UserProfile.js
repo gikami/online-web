@@ -46,10 +46,10 @@ export default function UserProfile() {
                         </div>
                         <div className="mt-2 mt-sm-3 mt-lg-4 row row-cols-2 gx-2 gx-sm-4">
                             <div>
-                                <button type="button" className="btn btn-1 w-100">Подписаться</button>
+                                <button type="button" data-bs-toggle="modal" data-bs-target="#announcement" className="btn btn-1 w-100">Подписаться</button>
                             </div>
                             <div>
-                                <button type="button" className="btn btn-2 w-100">
+                                <button type="button" data-bs-toggle="modal" data-bs-target="#announcement" className="btn btn-2 w-100">
                                     <span>Написать</span>
                                 </button>
                             </div>
