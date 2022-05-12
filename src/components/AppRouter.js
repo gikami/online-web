@@ -4,6 +4,7 @@ import { useLayoutEffect } from 'react';
 
 import MyProfile from '../pages/MyProfile';
 import UserProfile from '../pages/UserProfile';
+import PostFeed from '../pages/PostFeed';
 
 export default function AppRouter() {
     const Wrapper = ({children}) => {
@@ -19,6 +20,7 @@ export default function AppRouter() {
             <Routes>
                 <Route exact path="/" element={<UserProfile />} />
                 <Route exact path="/my-profile" element={<MyProfile />} />
+                <Route exact path="/postfeed" element={<PostFeed />} />
             </Routes>
         </Wrapper>
     )

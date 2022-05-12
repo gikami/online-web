@@ -42,7 +42,7 @@ export default function MainNav(props) {
                         </NavLink>
                     </li>
                     <li>
-                        <NavLink to="reels" data-bs-toggle="modal" data-bs-target="#announcement">
+                        <NavLink to="postfeed">
                             <div className='icon icon-video'></div>
                             <div className='title'>Видео Reels</div>
                         </NavLink>
