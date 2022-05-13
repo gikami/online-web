@@ -30,7 +30,7 @@ function App() {
     <BrowserRouter>
       <div className="container-xl py-xl-4">
         <header className="d-flex d-md-none">
-          <div className="fs-11 fw-6">@drugoiacc</div>
+          <div className="fs-11 fw-6">Online</div>
           <div className="d-flex align-items-center">
             <button type="button">
               <img src="../img/icons/add.svg" alt="Опубликовать" />

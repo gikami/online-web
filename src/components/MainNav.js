@@ -1,12 +1,14 @@
-import { NavLink, useLocation } from 'react-router-dom';
+import { NavLink, useLocation, Link } from 'react-router-dom';
 
 export default function MainNav(props) {
     let location = useLocation();
 
     return (
         <aside>
-            <img src="../img/logo.svg" className="d-block mx-auto mb-3" />
-            <div className='fw-6 text-center'>Online</div>
+            <Link to="/">
+                <img src="../img/logo.svg" className="d-block mx-auto mb-3" />
+                <div className='fw-6 text-center'>Online</div>
+            </Link>
             {
                 (location.pathname !== '/my-profile') &&
                 <div className="my-info mt-4 mt-xxl-5">
@@ -36,7 +38,7 @@ export default function MainNav(props) {
             <nav className="mt-4 mt-xxl-5">
                 <ul>
                     <li>
-                        <NavLink to="/">
+                        <NavLink to="/" exact={true}>
                             <div className='icon icon-home'></div>
                             <div className='title'>Главная</div>
                         </NavLink>

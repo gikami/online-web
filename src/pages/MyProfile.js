@@ -15,7 +15,6 @@ export default function MyProfile() {
     return (
         <main>
             <Header className="d-none d-md-flex" />
-
             <section className='px-3 px-sm-0 user-info'>
                 <div className="row justify-content-between">
                     <div className="col-sm-7 col-xxl-6">

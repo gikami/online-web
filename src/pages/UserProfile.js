@@ -52,19 +52,18 @@ export default function UserProfile() {
     return (
         <main>
             <Header className="d-none d-md-flex" />
-
             <section className='px-3 px-sm-0 user-info'>
                 <div className="row justify-content-between">
                     <div className="col-sm-7 col-xxl-6">
                         <div className='d-flex'>
-                            <div>
+                            <div className='flex-1'>
                                 <h1 className='d-none d-md-block'>@{user.nickname}</h1>
                                 <h2>{user.firstName} {user.lastName}</h2>
                                 {/* <div className="fs-09 blue"><a href="mailto:saitname@site.com">saitname@site.com</a></div> */}
                                 <TextAbout className="mt-2 mt-sm-4" text={user.about} />
                             </div>
-                            <div className="d-block d-sm-none mob-photo">
-                                <img src="../img/users/user0.png" alt={`${user.firstName} ${user.lastName}`} />
+                            <div className="d-block d-sm-none mob-photo empty">
+                                <img src={user.avatar ? URL + user.avatar : "../img/users/empty-photo.svg"} alt="Пользователь" />
                             </div>
                         </div>
                         <div className="brief-stat d-flex justify-content-around justify-content-xl-between mt-2 mt-sm-3 mt-lg-4">
@@ -96,7 +95,7 @@ export default function UserProfile() {
                     </div>
                     <div className="d-none d-sm-block col-sm-5">
                         <div className="photo">
-                            <img src={user.avatar ? URL + user.avatar : "../img/users/user0.png"} alt={`${user.firstName} ${user.lastName}`} />
+                            <img src={user.avatar ? URL + user.avatar : "../img/users/empty-photo.svg"} alt={`${user.firstName} ${user.lastName}`} />
                         </div>
                     </div>
                 </div>
@@ -251,7 +250,7 @@ export default function UserProfile() {
                                 }
                             </div>
                             : <div className="row row-cols-3 g-1 g-sm-2 g-md-3 g-lg-4">
-                                <div>
+                                {/* <div>
                                     <img src="../img/img1.png" alt="видео" className="video" />
                                 </div>
                                 <div>
@@ -268,10 +267,10 @@ export default function UserProfile() {
                                 </div>
                                 <div>
                                     <img src="../img/img1.png" alt="видео" className="video" />
-                                </div>+
+                                </div>
                                 <div>
                                     <img src="../img/img1.png" alt="видео" className="video" />
-                                </div>
+                                </div> */}
                             </div>
                     }
 

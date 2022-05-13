@@ -6,7 +6,7 @@ export default function MobileFooter() {
           <nav>
                 <ul>
                     <li>
-                        <NavLink to="/">
+                        <NavLink to="/" exact={true}>
                             <img src="../img/icons/home-sprite.png" alt="home"/>
                         </NavLink>
                     </li>
@@ -26,8 +26,8 @@ export default function MobileFooter() {
                         </NavLink>
                     </li>
                     <li>
-                        <NavLink to="my-profile">
-                            <img src="../img/photo.png" alt="Имя"/>
+                        <NavLink to="my-profile" data-bs-toggle="modal" data-bs-target="#announcement">
+                            <img src="../img/users/empty-photo.svg" alt="Имя"/>
                         </NavLink>
                     </li>
                 </ul>
