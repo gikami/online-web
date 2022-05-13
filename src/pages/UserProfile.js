@@ -26,24 +26,20 @@ export default function UserProfile() {
     const [blackList, setBlackList] = useState(0);
 
     const getUserData = async () => {
-        if (id) {
-            await getUser(id, auth ? auth.id : false)
-                .then((res) => {
-                    if (res.data.body) {
-                        setUserData(res.data.body)
+        await getUser(id && id != undefined ? id : 'admin', auth ? auth.id : false)
+            .then(async (res) => {
+                if (res.data.body) {
+                    setUserData(res.data.body);
+                    const postsData = await getProfilePosts(res.data.body.id ? res.data.body.id : 1, auth ? auth.id : '', 1);
+                    if (postsData) {
+                        setPosts(postsData.data.body.data)
                     }
-                }).catch((err) => {
-                    setLoading(false);
-                }).finally(() => {
-                    setLoading(false);
-                });
-
-            const postsData = await getProfilePosts(id, auth ? auth.id : '', 1);
-            if (postsData) {
-                setPosts(postsData.data.body.data)
-                console.log(postsData.data.body.data)
-            }
-        }
+                }
+            }).catch((err) => {
+                setLoading(false);
+            }).finally(() => {
+                setLoading(false);
+            });
     }
 
     useEffect(() => {

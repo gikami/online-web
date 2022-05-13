@@ -10,12 +10,12 @@ export default function MainNav(props) {
             {
                 (location.pathname !== '/my-profile') &&
                 <div className="my-info mt-4 mt-xxl-5">
-                    <div className="photo mx-auto mb-3">
-                        <img src="../img/users/user0.png" className="d-block mx-auto mb-3" />
+                    {/* <div className="photo mx-auto mb-3">
+                        <img src="../img/users/empty-photo.svg" className="d-block mx-auto mb-3" />
                     </div>
-                    <div className="d-none d-xl-block fs-12 fw-5">Вероника Евгеньева</div>
-                    <div className="d-none d-xl-block gray mt-2">@evgenievaaa</div>
-                    <div className="brief-stat d-none d-xxl-flex justify-content-between mt-4 px-3">
+                    <div className="d-none d-xl-block fs-12 fw-5">Имя Фамилия</div>
+                    <div className="d-none d-xl-block gray mt-2">@nickname</div> */}
+                    {/* <div className="brief-stat d-none d-xxl-flex justify-content-between mt-4 px-3">
                         <div>
                             <div className="fs-12 fw-6">86</div>
                             <div className="gray fs-08 fw-5 mt-2">Публикаций</div>
@@ -30,7 +30,7 @@ export default function MainNav(props) {
                             <div className="fs-12 fw-6">236</div>
                             <div className="gray fs-08 fw-5 mt-2">Подписки</div>
                         </div>
-                    </div>
+                    </div> */}
                 </div>
             }
             <nav className="mt-4 mt-xxl-5">
@@ -41,18 +41,18 @@ export default function MainNav(props) {
                             <div className='title'>Главная</div>
                         </NavLink>
                     </li>
-                    <li>
+                    {/* <li>
                         <NavLink to="postfeed">
                             <div className='icon icon-video'></div>
                             <div className='title'>Видео Reels</div>
                         </NavLink>
-                    </li>
-                    <li>
+                    </li> */}
+                    {/* <li>
                         <NavLink to="my-profile">
                             <div className='icon icon-user'></div>
                             <div className='title'>Профиль</div>
                         </NavLink>
-                    </li>
+                    </li> */}
                     <li>
                         <NavLink to="search" data-bs-toggle="modal" data-bs-target="#announcement">
                             <div className='icon icon-search'></div>
@@ -79,12 +79,12 @@ export default function MainNav(props) {
                             <div className='title'>Статистика</div>
                         </NavLink>
                     </li>
-                    <li>
+                    {/* <li>
                         <button type='button'>
                             <div className='icon icon-exit'></div>
                             <div className='title text-start'>Выход</div>
                         </button>
-                    </li>
+                    </li> */}
                 </ul>
             </nav>
         </aside>

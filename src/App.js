@@ -65,7 +65,7 @@ function App() {
             <ul className="row row-cols-3 row-cols-lg-4 row-cols-xl-5 justify-content-center gx-2 gx-sm-4 gx-lg-5 mt-3 mt-sm-4 mt-lg-5 text-uppercase">
               <li className="position-relative">
                 <img src="../img/google.png" alt="play market" />
-                <a href="" className="btn btn-1 pastel w-100 fw-6 mt-2 mt-lg-4">Перейти</a>
+                <a href="https://play.google.com/store/apps/details?id=vonline.su" target="_blank" className="btn btn-1 pastel w-100 fw-6 mt-2 mt-lg-4">Перейти</a>
               </li>
               <li className="position-relative">
                 <img src="../img/apple.png" alt="apple store" />

@@ -18,7 +18,8 @@ export default function AppRouter() {
     return (
         <Wrapper>
             <Routes>
-                <Route exact path="/user/:id" element={<UserProfile />} />
+                <Route exact path="/" element={<UserProfile />} />
+                <Route exact path="/:id" element={<UserProfile />} />
                 <Route exact path="/my-profile" element={<MyProfile />} />
                 <Route exact path="/postfeed" element={<PostFeed />} />
             </Routes>
