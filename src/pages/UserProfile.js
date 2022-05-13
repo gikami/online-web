@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, FreeMode } from 'swiper';
+import { Navigation, FreeMode, Pagination, EffectFade } from 'swiper';
 import { useParams } from "react-router-dom";
 import { URL } from "../api/config";
 import 'swiper/css';
+import 'swiper/css/effect-fade';
+import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import 'swiper/css/free-mode';
 import Header from "../components/Header";
@@ -234,7 +236,20 @@ export default function UserProfile() {
                                 {
                                     (posts && posts.length > 0) &&
                                     posts.map((item) => <div>
-                                        <img src={URL + item.medias[0].media} alt="пост" className="post" />
+                                        <Swiper
+                                            className='post'
+                                            modules={[Pagination, EffectFade]}
+                                            slidesPerView={1}
+                                            pagination={{ clickable: true }}
+                                            effect="fade"
+                                        >
+                                            {
+                                                item.medias.map((sub) => <SwiperSlide>
+                                                    <img src={URL + sub.media} alt="пост" className="post" />
+                                                </SwiperSlide>
+                                                )
+                                            }
+                                        </Swiper>
                                     </div>
                                     )
                                 }

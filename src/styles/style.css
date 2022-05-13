@@ -1,14 +1,31 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&display=swap");
 /* mixins */
-a, a:hover, a:focus, a:active {
+a,
+a:hover,
+a:focus,
+a:active {
   color: inherit;
   outline: none;
   text-decoration: none;
   cursor: pointer;
 }
 
-p, label, span, a, form, select, div, blockquote, cite, figure, figcaption, table, ul, ol, dl {
+p,
+label,
+span,
+a,
+form,
+select,
+div,
+blockquote,
+cite,
+figure,
+figcaption,
+table,
+ul,
+ol,
+dl {
   line-height: normal;
   margin-bottom: 0px;
 }
@@ -184,7 +201,8 @@ button {
   opacity: .5;
 }
 
-h1, .h1 {
+h1,
+.h1 {
   font-size: 1.5em;
   font-weight: 600;
   text-align: left;
@@ -368,14 +386,16 @@ body {
 }
 
 @media (min-width: 1660px) {
-  .container, .container-xl {
+  .container,
+  .container-xl {
     width: 1596px;
     max-width: 1596px;
   }
 }
 
 @media (max-width: 1199px) {
-  .container, .container-xl {
+  .container,
+  .container-xl {
     padding: 0px;
   }
 }
@@ -458,7 +478,8 @@ aside nav ul li:last-child {
   }
 }
 
-aside nav ul a, aside nav ul button {
+aside nav ul a,
+aside nav ul button {
   font-size: 1em;
   font-weight: 500;
   width: 100%;
@@ -473,13 +494,15 @@ aside nav ul a, aside nav ul button {
 }
 
 @media (max-width: 1659px) {
-  aside nav ul a, aside nav ul button {
+  aside nav ul a,
+  aside nav ul button {
     padding: .5em 1.5em;
   }
 }
 
 @media (max-width: 1199px) {
-  aside nav ul a, aside nav ul button {
+  aside nav ul a,
+  aside nav ul button {
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
@@ -487,7 +510,8 @@ aside nav ul a, aside nav ul button {
   }
 }
 
-aside nav ul a div.title, aside nav ul button div.title {
+aside nav ul a div.title,
+aside nav ul button div.title {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
@@ -495,17 +519,20 @@ aside nav ul a div.title, aside nav ul button div.title {
 }
 
 @media (max-width: 1199px) {
-  aside nav ul a div.title, aside nav ul button div.title {
+  aside nav ul a div.title,
+  aside nav ul button div.title {
     display: none;
   }
 }
 
-aside nav ul a span, aside nav ul button span {
+aside nav ul a span,
+aside nav ul button span {
   color: #8D8D8D;
 }
 
 @media (max-width: 1199px) {
-  aside nav ul a span, aside nav ul button span {
+  aside nav ul a span,
+  aside nav ul button span {
     position: absolute;
     top: 0px;
     right: 0px;
@@ -528,7 +555,8 @@ aside nav ul a span, aside nav ul button span {
   }
 }
 
-aside nav ul a .icon, aside nav ul button .icon {
+aside nav ul a .icon,
+aside nav ul button .icon {
   width: 1.3em;
   height: 1.3em;
   background-size: contain;
@@ -536,39 +564,48 @@ aside nav ul a .icon, aside nav ul button .icon {
   background-position: center center;
 }
 
-aside nav ul a .icon-home, aside nav ul button .icon-home {
+aside nav ul a .icon-home,
+aside nav ul button .icon-home {
   background-image: url(bg-imgs/home-black.png);
 }
 
-aside nav ul a .icon-video, aside nav ul button .icon-video {
+aside nav ul a .icon-video,
+aside nav ul button .icon-video {
   background-image: url(bg-imgs/video-black.png);
 }
 
-aside nav ul a .icon-user, aside nav ul button .icon-user {
+aside nav ul a .icon-user,
+aside nav ul button .icon-user {
   background-image: url(bg-imgs/user-black.png);
 }
 
-aside nav ul a .icon-search, aside nav ul button .icon-search {
+aside nav ul a .icon-search,
+aside nav ul button .icon-search {
   background-image: url(bg-imgs/search-black.png);
 }
 
-aside nav ul a .icon-notifications, aside nav ul button .icon-notifications {
+aside nav ul a .icon-notifications,
+aside nav ul button .icon-notifications {
   background-image: url(bg-imgs/notifications-black.png);
 }
 
-aside nav ul a .icon-messages, aside nav ul button .icon-messages {
+aside nav ul a .icon-messages,
+aside nav ul button .icon-messages {
   background-image: url(bg-imgs/messages-black.png);
 }
 
-aside nav ul a .icon-statistics, aside nav ul button .icon-statistics {
+aside nav ul a .icon-statistics,
+aside nav ul button .icon-statistics {
   background-image: url(bg-imgs/stat-black.png);
 }
 
-aside nav ul a .icon-exit, aside nav ul button .icon-exit {
+aside nav ul a .icon-exit,
+aside nav ul button .icon-exit {
   background-image: url(bg-imgs/exit-black.png);
 }
 
-aside nav ul a:hover div.title, aside nav ul button:hover div.title {
+aside nav ul a:hover div.title,
+aside nav ul button:hover div.title {
   background-image: -webkit-gradient(linear, left top, right top, from(#FF512F), to(#F09819));
   background-image: linear-gradient(to right, #FF512F, #F09819);
   -webkit-background-clip: text;
@@ -577,39 +614,56 @@ aside nav ul a:hover div.title, aside nav ul button:hover div.title {
   text-fill-color: transparent;
 }
 
-aside nav ul a:hover .icon-home, aside nav ul a.active .icon-home, aside nav ul button:hover .icon-home, aside nav ul button.active .icon-home {
+aside nav ul a:hover .icon-home, aside nav ul a.active .icon-home,
+aside nav ul button:hover .icon-home,
+aside nav ul button.active .icon-home {
   background-image: url(bg-imgs/home-gradient.png);
 }
 
-aside nav ul a:hover .icon-video, aside nav ul a.active .icon-video, aside nav ul button:hover .icon-video, aside nav ul button.active .icon-video {
+aside nav ul a:hover .icon-video, aside nav ul a.active .icon-video,
+aside nav ul button:hover .icon-video,
+aside nav ul button.active .icon-video {
   background-image: url(bg-imgs/video-gradient.png);
 }
 
-aside nav ul a:hover .icon-user, aside nav ul a.active .icon-user, aside nav ul button:hover .icon-user, aside nav ul button.active .icon-user {
+aside nav ul a:hover .icon-user, aside nav ul a.active .icon-user,
+aside nav ul button:hover .icon-user,
+aside nav ul button.active .icon-user {
   background-image: url(bg-imgs/user-gradient.png);
 }
 
-aside nav ul a:hover .icon-search, aside nav ul a.active .icon-search, aside nav ul button:hover .icon-search, aside nav ul button.active .icon-search {
+aside nav ul a:hover .icon-search, aside nav ul a.active .icon-search,
+aside nav ul button:hover .icon-search,
+aside nav ul button.active .icon-search {
   background-image: url(bg-imgs/search-gradient.png);
 }
 
-aside nav ul a:hover .icon-notifications, aside nav ul a.active .icon-notifications, aside nav ul button:hover .icon-notifications, aside nav ul button.active .icon-notifications {
+aside nav ul a:hover .icon-notifications, aside nav ul a.active .icon-notifications,
+aside nav ul button:hover .icon-notifications,
+aside nav ul button.active .icon-notifications {
   background-image: url(bg-imgs/notifications-gradient.png);
 }
 
-aside nav ul a:hover .icon-messages, aside nav ul a.active .icon-messages, aside nav ul button:hover .icon-messages, aside nav ul button.active .icon-messages {
+aside nav ul a:hover .icon-messages, aside nav ul a.active .icon-messages,
+aside nav ul button:hover .icon-messages,
+aside nav ul button.active .icon-messages {
   background-image: url(bg-imgs/messages-gradient.png);
 }
 
-aside nav ul a:hover .icon-statistics, aside nav ul a.active .icon-statistics, aside nav ul button:hover .icon-statistics, aside nav ul button.active .icon-statistics {
+aside nav ul a:hover .icon-statistics, aside nav ul a.active .icon-statistics,
+aside nav ul button:hover .icon-statistics,
+aside nav ul button.active .icon-statistics {
   background-image: url(bg-imgs/stat-gradient.png);
 }
 
-aside nav ul a:hover .icon-exit, aside nav ul a.active .icon-exit, aside nav ul button:hover .icon-exit, aside nav ul button.active .icon-exit {
+aside nav ul a:hover .icon-exit, aside nav ul a.active .icon-exit,
+aside nav ul button:hover .icon-exit,
+aside nav ul button.active .icon-exit {
   background-image: url(bg-imgs/exit-gradient.png);
 }
 
-aside nav ul a.active::after, aside nav ul button.active::after {
+aside nav ul a.active::after,
+aside nav ul button.active::after {
   content: '';
   position: absolute;
   right: 0px;
@@ -622,7 +676,8 @@ aside nav ul a.active::after, aside nav ul button.active::after {
 }
 
 @media (max-width: 1199px) {
-  aside nav ul a.active::after, aside nav ul button.active::after {
+  aside nav ul a.active::after,
+  aside nav ul button.active::after {
     content: unset;
   }
 }
@@ -819,7 +874,8 @@ header a:hover img, header a.active img {
   border-radius: 20px;
 }
 
-.user-info .mob-photo.empty svg, .user-info .mob-photo.empty img {
+.user-info .mob-photo.empty svg,
+.user-info .mob-photo.empty img {
   width: 100%;
   height: 100%;
   background: #fff;
@@ -975,7 +1031,8 @@ header a:hover img, header a.active img {
   position: unset;
 }
 
-.topical .swiper .swiper-button-next, .topical .swiper .swiper-button-prev {
+.topical .swiper .swiper-button-next,
+.topical .swiper .swiper-button-prev {
   background: -webkit-gradient(linear, left top, right top, from(#FF512F), to(#F09819));
   background: linear-gradient(to right, #FF512F, #F09819);
   color: #fff;
@@ -987,12 +1044,14 @@ header a:hover img, header a.active img {
 }
 
 @media (max-width: 767px) {
-  .topical .swiper .swiper-button-next, .topical .swiper .swiper-button-prev {
+  .topical .swiper .swiper-button-next,
+  .topical .swiper .swiper-button-prev {
     display: none;
   }
 }
 
-.topical .swiper .swiper-button-next:after, .topical .swiper .swiper-button-prev:after {
+.topical .swiper .swiper-button-next:after,
+.topical .swiper .swiper-button-prev:after {
   font-size: 1em;
 }
 
@@ -1273,8 +1332,10 @@ footer nav ul {
 
 @media (max-width: 575px) {
   footer nav ul {
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 0px .5em;
   }
 }
 
