@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import MetaTags from 'react-meta-tags';
 import { Navigation, FreeMode, Pagination, EffectFade } from 'swiper';
 import { useParams } from "react-router-dom";
 import { URL } from "../api/config";
@@ -49,7 +50,28 @@ export default function UserProfile() {
         })();
     }, []);
 
-    return (
+    return (<>
+        <MetaTags>
+            {
+                id && id != undefined ?
+                    <>
+                        <title>{user.firstName} {user.lastName} уже в социальной сети Online!</title>
+                        <meta name="title" content={`${user.firstName} ${user.lastName} уже в социальной сети Online!`} />
+                        <meta name="description" content={user.about && user.about.length > 10 ? user.about : 'Публикуйте фото, видео, истории в социальной сети Online и находите новую аудиторию'} />
+                        <meta property="og:title" content={`${user.firstName} ${user.lastName} уже в социальной сети Online!`} />
+                        <meta property="og:image" content={user.avatar ? URL + user.avatar : "../img/users/empty-photo.svg"} />
+                        <meta name="keywords" content={`${user.firstName},${user.lastName},социальная сеть,online,vonline`} />
+                    </>
+                    : <>
+                        <title>Социальная сеть Online</title>
+                        <meta name="title" content="Социальная сеть Online" />
+                        <meta name="description" content='Публикуйте фото, видео, истории в социальной сети Online и находите новую аудиторию' />
+                        <meta property="og:title" content='Социальная сеть Online' />
+                        <meta property="og:image" content="../img/photo.png" />
+                        <meta name="keywords" content='социальная сеть,online,vonline' />
+                    </>
+            }
+        </MetaTags>
         <main>
             <Header className="d-none d-md-flex" />
             <section className='px-3 px-sm-0 user-info'>
@@ -277,5 +299,6 @@ export default function UserProfile() {
                 </div>
             </section>
         </main>
+    </>
     )
 }
